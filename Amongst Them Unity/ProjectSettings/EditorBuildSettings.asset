@@ -4,9 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScreen.unity
+    guid: 56c0f2b4522c98a4ea19c9b45e0c587e
+  - enabled: 1
+    path: Assets/Scenes/LobbyScreen.unity
+    guid: cca128a1285fe3a4cbabc12d1fdbc0f8
+  - enabled: 1
+    path: Assets/Scenes/CharacterSetup.unity
+    guid: c7d4920e70dd5e847890cf32526b4550
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 623ee16a4b7540143a9f15f200c90076,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: de8a8e4f987434338a4b1062feb8d069,
       type: 2}
