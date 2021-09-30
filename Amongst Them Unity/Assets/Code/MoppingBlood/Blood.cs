@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Blood : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        BloodMopManager.Instance.HandleBloodCollected();
+        Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        Destroy(gameObject);
+        BloodMopManager.Instance.HandleBloodCollected();
     }
 }
