@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 4295814994972242133}
   - component: {fileID: 254354903317421648}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Smokey boi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5102,7 +5102,7 @@ GameObject:
   - component: {fileID: 496193451763733926}
   - component: {fileID: 3027978620692994973}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
