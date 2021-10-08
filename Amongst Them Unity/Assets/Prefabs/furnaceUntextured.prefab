@@ -112,6 +112,7 @@ Transform:
   - {fileID: 8703467768394923500}
   - {fileID: 2936530048444684587}
   - {fileID: 7129565011491545627}
+  - {fileID: 4906276909931935418}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.825, z: 0}
@@ -282,3 +283,88 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &4871805900677763409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2067433803901780558}
+    m_Modifications:
+    - target: {fileID: -8700617353114198275, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.6614
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2100034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.160432
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0015268544
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99999887
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1018664272722485354, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d5566855fdc2144b8dcd5856558398,
+        type: 3}
+      propertyPath: m_Name
+      value: FBXcrumpledPaper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03d5566855fdc2144b8dcd5856558398, type: 3}
+--- !u!4 &4906276909931935418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03d5566855fdc2144b8dcd5856558398,
+    type: 3}
+  m_PrefabInstance: {fileID: 4871805900677763409}
+  m_PrefabAsset: {fileID: 0}
