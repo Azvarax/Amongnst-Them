@@ -26,7 +26,7 @@ public class GrabbableObject : MonoBehaviour
 
     public void Grab(ObjectGrabber controller)
     {
-        Debug.Log(name);
+
         _controller = controller;
         _rb = GetComponent<Rigidbody>();
         _rb.isKinematic = true;
