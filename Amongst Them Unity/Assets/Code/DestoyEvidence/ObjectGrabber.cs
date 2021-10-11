@@ -1,16 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectGrabber : MonoBehaviour
 {
     private Collider _collider;
-    private GrabbableObject _potentialObject;
+    private List<GrabbableObject> _potentialObjects;
     private GrabbableObject _grabbedObject;
+
+    [SerializeField] private List<Sprite> _handSprites;
+    [SerializeField] private Image _hand;
+
+    [SerializeField] private HoldButton _holdButton;
+
+    private GameObject _previouslyGrabbedObject;
 
     void Awake()
     {
         _collider = GetComponent<Collider>();
+        _potentialObjects = new List<GrabbableObject>();
+    }
+
+    private void OnEnable()
+    {
+        _holdButton.onPointerDown.AddListener(GrabObject);
+        _holdButton.onPointerUp.AddListener(FlingObject);
+    }
+
+    private void OnDisable()
+    {
+        _holdButton.onPointerDown.RemoveListener(GrabObject);
+        _holdButton.onPointerUp.RemoveListener(FlingObject);
     }
 
     void Update()
@@ -24,22 +45,14 @@ public class ObjectGrabber : MonoBehaviour
             _collider.enabled = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
-            if (_potentialObject != null)
-            {
-                _grabbedObject = _potentialObject;
-                _grabbedObject.Grab(this);
-            }
+            GrabObject();
         }
 
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.E) || Input.GetMouseButtonUp(0))
         {
-            if (_grabbedObject != null)
-            {
-                _grabbedObject.Fling();
-            }
-            Reset();
+            FlingObject();
         }
     }
 
@@ -47,21 +60,70 @@ public class ObjectGrabber : MonoBehaviour
     {
         if (other.GetComponent<GrabbableObject>())
         {
-            _potentialObject = other.GetComponent<GrabbableObject>();
+            _potentialObjects.Add(other.GetComponent<GrabbableObject>());
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<GrabbableObject>() == _potentialObject)
+        if (_potentialObjects.Contains(other.GetComponent<GrabbableObject>()))
         {
-            _potentialObject = null;
+            _potentialObjects.Remove(other.GetComponent<GrabbableObject>());
         }
+    }
+
+    void GrabObject()
+    {
+        if (_potentialObjects != null && _potentialObjects.Count > 0)
+        {
+            GrabbableObject closestPotentialObject = null;
+            float closestDistanceFromObject = 0;
+            foreach (GrabbableObject potentialObject in _potentialObjects)
+            {
+                float distanceFromObject;
+                distanceFromObject = Mathf.Abs(potentialObject.transform.position.magnitude - transform.position.magnitude);
+                if (closestPotentialObject == null)
+                {
+                    closestDistanceFromObject = distanceFromObject;
+                    closestPotentialObject = potentialObject;
+                }
+                else
+                {
+                    if (distanceFromObject < closestDistanceFromObject)
+                    {
+                        closestPotentialObject = potentialObject;
+                        closestDistanceFromObject = distanceFromObject;
+                    }
+                }
+            }
+            _grabbedObject = closestPotentialObject;
+            _grabbedObject.Grab(this);
+        }
+
+        _hand.sprite = _handSprites[1];
+    }
+
+    void FlingObject()
+    {
+        if (_grabbedObject != null)
+        {
+            if (_previouslyGrabbedObject != null)
+            {
+                Destroy(_previouslyGrabbedObject);
+            }
+            _previouslyGrabbedObject = _grabbedObject.gameObject;
+            _grabbedObject.Fling();
+        }
+        _hand.sprite = _handSprites[0];
+        Reset();
     }
 
     public void Reset()
     {
-        _potentialObject = null;
         _grabbedObject = null;
+        _potentialObjects.Clear();
+        _potentialObjects = new List<GrabbableObject>();
+        _collider.enabled = false;
+        _collider.enabled = true;
     }
 }
