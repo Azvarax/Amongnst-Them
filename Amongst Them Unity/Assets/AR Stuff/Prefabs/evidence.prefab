@@ -457,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1241805312443142502}
   m_Layer: 0
-  m_Name: Destroy Evidence Game
+  m_Name: evidence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,13 +616,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.21
+      value: 0.741
       objectReference: {fileID: 0}
     - target: {fileID: 2067433803901780558, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
@@ -672,17 +687,17 @@ PrefabInstance:
     - target: {fileID: 3939383610996789310, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3939383610996789310, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3939383610996789310, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3939383610996789310, guid: 3a26287c396778a4995b1400b429caa9,
         type: 3}
