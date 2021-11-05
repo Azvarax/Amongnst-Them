@@ -429,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 645516050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -29.08, y: 0.724, z: 17.68}
-  m_LocalScale: {x: 0.14, y: 0, z: 0.07}
+  m_LocalScale: {x: 0.14, y: 0.06, z: 0.07}
   m_Children: []
   m_Father: {fileID: 1923188726}
   m_RootOrder: 1
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countingSource: {fileID: 645516054}
-  PileofMoney: {fileID: 2464988732922791739, guid: 0bb3763a445b5de4eb87236307133810,
+  PileofMoney: {fileID: 2184198938058805686, guid: 2fb9368bbc41025458422966ce9dd897,
     type: 3}
   pileLocator: {fileID: 1563623274}
 --- !u!64 &645516053
@@ -474,9 +474,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: f7c56b022851aee428c3d94848f5af15, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.63
   m_Pitch: 1
   Loop: 0
   Mute: 0
