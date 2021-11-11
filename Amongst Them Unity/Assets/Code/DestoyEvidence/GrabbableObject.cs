@@ -9,6 +9,7 @@ public class GrabbableObject : MonoBehaviour
 
     private Vector3 _previousPosition;
     private Vector3 _currentPosition;
+    public float xAngle, yAngle, zAngle;
 
     private void Update()
     {
@@ -33,6 +34,8 @@ public class GrabbableObject : MonoBehaviour
         transform.SetParent(_controller.transform);
         transform.localPosition = Vector3.zero;
         transform.localEulerAngles = Vector3.zero;
+        //_rb.transform.Rotate(xAngle, yAngle, zAngle, Space.Self);
+        
     }
 
     public void LetGo()
@@ -49,5 +52,10 @@ public class GrabbableObject : MonoBehaviour
     {
         LetGo();
         _rb.AddForce((_currentPosition - _previousPosition) * 2000);
+    }
+
+    public void Rotate(float xAngle, float yAngle, float zAngle, Space relativeto = Space.Self)
+    {
+
     }
 }
