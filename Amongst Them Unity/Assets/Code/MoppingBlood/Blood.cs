@@ -6,13 +6,19 @@ public class Blood : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        BloodMopManager.Instance.HandleBloodCollected();
-        Destroy(gameObject);
+        if (other.CompareTag("Mop"))
+        {
+            BloodMopManager.Instance.HandleBloodCollected();
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
-        BloodMopManager.Instance.HandleBloodCollected();
+        if (collision.gameObject.CompareTag("Mop"))
+        {
+            Destroy(gameObject);
+            BloodMopManager.Instance.HandleBloodCollected();
+        }
     }
 }
