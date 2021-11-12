@@ -45,9 +45,10 @@ public class ObjectGrabber : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<GrabbableObject>())
+        GrabbableObject grabbable = other.GetComponent<GrabbableObject>();
+        if(grabbable != null)
         {
-            _potentialObject = other.GetComponent<GrabbableObject>();
+            _potentialObject = grabbable;
         }
     }
 
