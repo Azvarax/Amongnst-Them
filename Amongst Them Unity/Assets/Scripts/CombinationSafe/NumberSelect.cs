@@ -5,8 +5,12 @@ using UnityEngine;
 public class NumberSelect : MonoBehaviour
 {
     [SerializeField] Transform dial;
+    [SerializeField] Transform door;
     [SerializeField] SafeSelect safe;
+    [SerializeField] float targetAngle;
 
+    Vector3 curAngle;
+    float change;
     List<int> numberList = new List<int>();
 
     bool direction;
@@ -16,6 +20,7 @@ public class NumberSelect : MonoBehaviour
         GenerateNumbers();
         direction = true;
         comboPosition = 0;
+        curAngle = door.eulerAngles;
     }
 
     
@@ -38,7 +43,10 @@ public class NumberSelect : MonoBehaviour
 
         if (safe.currentNumber == numberList[comboPosition])
         {
-            if (comboPosition == 2) { Debug.Log("You Win!"); }
+            if (comboPosition == 2)
+            {
+                StartCoroutine(SmoothSetAngle(new Vector3(0, 120, 0)));
+            }
             else
             { comboPosition++; }
             direction = !direction;
@@ -68,6 +76,20 @@ public class NumberSelect : MonoBehaviour
         }
 
         numberList.Add(numb);
+    }
+
+    IEnumerator SmoothSetAngle(Vector3 angle)
+    {
+        while(door.eulerAngles != angle)
+        {
+            SetAngle(door.eulerAngles + new Vector3(0, 5, 0));
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    void SetAngle(Vector3 angle)
+    {
+        door.eulerAngles = angle;
     }
 
 }
