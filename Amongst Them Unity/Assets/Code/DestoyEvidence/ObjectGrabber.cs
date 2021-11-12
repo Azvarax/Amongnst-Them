@@ -54,7 +54,7 @@ public class ObjectGrabber : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<GrabbableObject>() == _potentialObject)
+        if (_potentialObject != null && other.GetComponent<GrabbableObject>() == _potentialObject)
         {
             _potentialObject = null;
         }
