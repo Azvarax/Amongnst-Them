@@ -16,7 +16,7 @@ public class ImageRecognitionDemo : MonoBehaviour
 
         foreach (GameObject prefab in placeablePrefabs)
         {
-            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            GameObject newPrefab = Instantiate(prefab, new Vector3(0,100,0), Quaternion.identity);
             newPrefab.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }

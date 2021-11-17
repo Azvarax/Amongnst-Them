@@ -19,19 +19,19 @@ MonoBehaviour:
       m_GuidLow: 4734825787837013500
       m_GuidHigh: 7716792449865801888
     m_SerializedTextureGuid:
-      m_GuidLow: 14177228944768154971
-      m_GuidHigh: 11975954453139728475
-    m_Size: {x: 0.1, y: 0.10556701}
+      m_GuidLow: 11863056742833267238
+      m_GuidHigh: 12043434896272419513
+    m_Size: {x: 0.3, y: 0.21502891}
     m_SpecifySize: 1
     m_Name: blood
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 22e122260b41a4a2b96adcb33ae022a7, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4952494487497720281
       m_GuidHigh: 12793254122702999955
     m_SerializedTextureGuid:
-      m_GuidLow: 6087267011091907862
-      m_GuidHigh: 513449982022047194
-    m_Size: {x: 0.1, y: 0.0984375}
+      m_GuidLow: 7258848221164449651
+      m_GuidHigh: 17105952481272679080
+    m_Size: {x: 0.3, y: 0.21502891}
     m_SpecifySize: 1
     m_Name: evidence
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 84fbaf739bff64bca84af886268d64ed, type: 3}
