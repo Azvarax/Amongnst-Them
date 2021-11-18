@@ -53,9 +53,11 @@ public class ImageRecognitionDemo : MonoBehaviour
     {
         string name = trackedImage.referenceImage.name;
         Vector3 position = trackedImage.transform.position;
+        Vector3 rotation = trackedImage.transform.eulerAngles;
 
         GameObject prefab = spawnedPrefabs[name];
         prefab.transform.position = position;
+        prefab.transform.eulerAngles = rotation;
         prefab.SetActive(true);
 
         //foreach (GameObject go in spawnedPrefabs.Values)

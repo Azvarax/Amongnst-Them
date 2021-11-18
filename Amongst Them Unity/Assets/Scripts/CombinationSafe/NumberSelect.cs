@@ -89,7 +89,11 @@ public class NumberSelect : MonoBehaviour
 
     void SetAngle(Vector3 angle)
     {
-        door.eulerAngles = angle;
+        door.localEulerAngles = angle;
     }
 
+    public void OpenDoor()
+    {
+        SetAngle(new Vector3(0, 120, 0));
+    }
 }
