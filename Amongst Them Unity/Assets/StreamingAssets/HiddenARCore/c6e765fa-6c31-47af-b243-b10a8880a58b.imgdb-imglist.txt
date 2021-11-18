@@ -1,2 +1,0 @@
-c5625dfc7af741b5a0e0aa0bd98d176b|/Users/matthewburton/Documents/GitHub/Amongnst-Them/Amongst Them Unity/Assets/Images/hatman.jpg|0.3
-3761c1d9cb7f44ba939103d1d7c48ab1|/Users/matthewburton/Documents/GitHub/Amongnst-Them/Amongst Them Unity/Assets/AR Stuff/Materials/Wall_Card.png|0.3

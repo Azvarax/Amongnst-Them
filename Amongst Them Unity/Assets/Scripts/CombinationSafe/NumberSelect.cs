@@ -94,6 +94,6 @@ public class NumberSelect : MonoBehaviour
 
     public void OpenDoor()
     {
-        SetAngle(new Vector3(0, 120, 0));
+        SetAngle(new Vector3(0, -120, 0));
     }
 }
