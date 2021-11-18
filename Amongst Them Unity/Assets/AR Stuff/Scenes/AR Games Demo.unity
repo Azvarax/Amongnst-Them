@@ -246,6 +246,7 @@ MonoBehaviour:
     type: 3}
   destroyEvidenceGamePrefab: {fileID: 4335620433383585587, guid: 26a91516137fdf04eabaa7a129a99a31,
     type: 3}
+  moveMoneyGamePrefab: {fileID: 0}
   combinationLockGamePrefab: {fileID: 331075266}
   mopGameButton: {fileID: 1056015502}
   destroyEvidenceGameButton: {fileID: 1745635766}
@@ -597,7 +598,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1590,7 +1591,19 @@ MonoBehaviour:
   isPressed: 0
   onPointerDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPointerUp:
     m_PersistentCalls:
       m_Calls: []
@@ -1607,7 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.764151, g: 0.11894804, b: 0.11894804, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2181,11 +2194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ba757b6d852244c94f2b009248bcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handSprites:
-  - {fileID: 21300000, guid: 7fe7d4ccdf543af4491595b7a2704f8a, type: 3}
-  - {fileID: 21300000, guid: b39bd0221f6dadd4583f7242f1c23d3e, type: 3}
-  _hand: {fileID: 1857760857}
-  _holdButton: {fileID: 865050114}
 --- !u!135 &1457437503
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2341,8 +2349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeablePrefabs:
-  - {fileID: 1364158989324692952, guid: 57b5404301eb18b47a53598963cbb701, type: 3}
-  - {fileID: 4335620433383585587, guid: 26a91516137fdf04eabaa7a129a99a31, type: 3}
+  - {fileID: 8695200123639823740, guid: 7aa940e9426c3b341ac4c5e36512c1c9, type: 3}
+  - {fileID: 5305244096160887452, guid: 06373936d146c1642bea7f8ad3f246f1, type: 3}
+  - {fileID: 8572731322721850540, guid: 632ae09c48618c64291bb7e635eb34bf, type: 3}
+  - {fileID: 7259199647826937924, guid: 542dbcb5ba9354086926908406b290cd, type: 3}
 --- !u!114 &1674023551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2692,7 +2702,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 200}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857760857
 MonoBehaviour:
@@ -2708,7 +2718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3512,8 +3522,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ba757b6d852244c94f2b009248bcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handSprites:
-  - {fileID: 21300000, guid: 7fe7d4ccdf543af4491595b7a2704f8a, type: 3}
-  - {fileID: 21300000, guid: b39bd0221f6dadd4583f7242f1c23d3e, type: 3}
-  _hand: {fileID: 1857760857}
-  _holdButton: {fileID: 865050114}

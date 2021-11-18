@@ -23,7 +23,7 @@ MonoBehaviour:
       m_GuidHigh: 12043434896272419513
     m_Size: {x: 0.3, y: 0.21502891}
     m_SpecifySize: 1
-    m_Name: blood
+    m_Name: Game-Furnace
     m_Texture: {fileID: 2800000, guid: 22e122260b41a4a2b96adcb33ae022a7, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4952494487497720281
@@ -33,5 +33,5 @@ MonoBehaviour:
       m_GuidHigh: 17105952481272679080
     m_Size: {x: 0.3, y: 0.21502891}
     m_SpecifySize: 1
-    m_Name: evidence
+    m_Name: Game-Safe
     m_Texture: {fileID: 2800000, guid: 84fbaf739bff64bca84af886268d64ed, type: 3}

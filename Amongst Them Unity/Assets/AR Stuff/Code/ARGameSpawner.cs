@@ -8,6 +8,7 @@ public class ARGameSpawner : MonoBehaviour
     public Transform spawnPoint;
     public GameObject mopGamePrefab;
     public GameObject destroyEvidenceGamePrefab;
+    public GameObject moveMoneyGamePrefab;
     public GameObject combinationLockGamePrefab;
 
     public Button mopGameButton;

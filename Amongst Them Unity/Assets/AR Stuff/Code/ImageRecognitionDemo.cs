@@ -17,6 +17,7 @@ public class ImageRecognitionDemo : MonoBehaviour
         foreach (GameObject prefab in placeablePrefabs)
         {
             GameObject newPrefab = Instantiate(prefab, new Vector3(0,100,0), Quaternion.identity);
+            newPrefab.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             newPrefab.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }
