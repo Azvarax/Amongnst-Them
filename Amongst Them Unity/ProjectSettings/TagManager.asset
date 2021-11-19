@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mop
+  - Number
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Number
   - Water
   - UI
   - 
