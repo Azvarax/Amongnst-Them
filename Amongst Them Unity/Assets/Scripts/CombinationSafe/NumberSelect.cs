@@ -9,6 +9,9 @@ public class NumberSelect : MonoBehaviour
     [SerializeField] SafeSelect safe;
     [SerializeField] float targetAngle;
 
+    public bool LeftButton;
+    public bool RightButton;
+
     Vector3 curAngle;
     float change;
     List<int> numberList = new List<int>();
@@ -28,14 +31,14 @@ public class NumberSelect : MonoBehaviour
     {
         if (direction)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (RightButton)
             {
                 dial.Rotate(0f, 0f, 1f);
             }
         }
         else
         {
-            if (Input.GetKey(KeyCode.A))
+            if (LeftButton)
             {
                 dial.Rotate(0f, 0f, -1f);
             }
@@ -92,4 +95,23 @@ public class NumberSelect : MonoBehaviour
         door.eulerAngles = angle;
     }
 
+    public void leftDown()
+    {
+        LeftButton = true;
+    }
+
+    public void leftUp()
+    {
+        LeftButton = false;
+    }
+
+    public void rightDown()
+    {
+        RightButton = true;
+    }
+
+    public void rightUp()
+    {
+        RightButton = false;
+    }
 }
