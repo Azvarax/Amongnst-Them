@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: a7bed68887a07e34394d4191b3081359, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24939373, g: 0.31173843, b: 0.36743385, a: 1}
+  m_IndirectSpecularColor: {r: 0.24939394, g: 0.31173864, b: 0.36743417, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -2485,10 +2485,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeablePrefabs:
-  - {fileID: 8695200123639823740, guid: 7aa940e9426c3b341ac4c5e36512c1c9, type: 3}
-  - {fileID: 5305244096160887452, guid: 06373936d146c1642bea7f8ad3f246f1, type: 3}
-  - {fileID: 8572731322721850540, guid: 632ae09c48618c64291bb7e635eb34bf, type: 3}
-  - {fileID: 7259199647826937924, guid: 542dbcb5ba9354086926908406b290cd, type: 3}
+  - {fileID: 5511694098702142903, guid: 068c06f9344c973428e793ce4d8755e2, type: 3}
+  - {fileID: 6467172756326818563, guid: b0f2596c24e5406498c59a22016dd3ed, type: 3}
+  - {fileID: 5752967331971557550, guid: 0a2f1621d46749b429935bcc6e4dd9c1, type: 3}
 --- !u!114 &1674023551
 MonoBehaviour:
   m_ObjectHideFlags: 0
