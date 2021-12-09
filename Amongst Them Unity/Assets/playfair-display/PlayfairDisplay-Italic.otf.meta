@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: cea37f837f489444a8a8b75e5c03b445
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Playfair Display
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b34c7a01120dd334f865da6d55b76693, type: 3}
+  - {fileID: 12800000, guid: 86bdb0160d012264a859f10be4014ebc, type: 3}
+  - {fileID: 12800000, guid: 52a0489a366b7ad42922b1b088446413, type: 3}
+  - {fileID: 12800000, guid: 34b84826f6597494188a5e7228371c43, type: 3}
+  - {fileID: 12800000, guid: 5963bf4f9a25f83419ab2cbcec5e04a4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
