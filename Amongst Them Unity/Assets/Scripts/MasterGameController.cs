@@ -15,12 +15,14 @@ public class MasterGameController : MonoBehaviour
         BaseGameController game = _games[which];
 
         BaseGameController newGame = Instantiate(game);
+
         
         newGame.transform.position = new Vector3(
             zone.transform.position.x,
             0f,
             zone.transform.position.z
         );
+        newGame.transform.localRotation = zone.transform.localRotation;
 
         _activeGames.Add(newGame);
 

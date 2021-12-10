@@ -7,6 +7,7 @@ public class ObjectGrabber : MonoBehaviour
     private Collider _collider;
     private GrabbableObject _potentialObject;
     private GrabbableObject _grabbedObject;
+    private Button3d _myButt;
 
     void Awake()
     {
@@ -31,6 +32,11 @@ public class ObjectGrabber : MonoBehaviour
                 _grabbedObject = _potentialObject;
                 _grabbedObject.Grab(this);
             }
+
+            if (_myButt != null)
+            {
+                _myButt.OnMouseDown();
+            }
         }
 
         else if (Input.GetKeyUp(KeyCode.E))
@@ -38,6 +44,11 @@ public class ObjectGrabber : MonoBehaviour
             if (_grabbedObject != null)
             {
                 _grabbedObject.Fling();
+            }
+
+            if(_myButt != null)
+            {
+                _myButt.OnMouseUp();
             }
             Reset();
         }
@@ -50,6 +61,12 @@ public class ObjectGrabber : MonoBehaviour
         {
             _potentialObject = grabbable;
         }
+
+        Button3d butt = other.GetComponent<Button3d>();
+        if(butt)
+        {
+            _myButt = butt;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -57,6 +74,11 @@ public class ObjectGrabber : MonoBehaviour
         if (_potentialObject != null && other.GetComponent<GrabbableObject>() == _potentialObject)
         {
             _potentialObject = null;
+        }
+
+        if (_myButt != null && other.GetComponent<Button3d>() == _myButt)
+        {
+            _myButt = null;
         }
     }
 
