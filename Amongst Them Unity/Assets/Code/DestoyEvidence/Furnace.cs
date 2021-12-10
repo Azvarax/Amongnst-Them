@@ -10,7 +10,8 @@ public class Furnace : MonoBehaviour
     {
         if (other.GetComponent<GrabbableObject>())
         {
-            print("EVIDENCE DESTROYED");
+            StartCoroutine(WinningText.instance.ShowWinText());
+
             Destroy(other.gameObject);
             Whoosh.GetComponent<AudioSource>().Play();
         }

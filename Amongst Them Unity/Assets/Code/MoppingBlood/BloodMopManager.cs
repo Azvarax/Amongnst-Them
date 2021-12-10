@@ -30,7 +30,8 @@ public class BloodMopManager : MonoBehaviour
         print("bloods left: " + bloodCount);
         if(bloodCount <= 0)
         {
-            print("Winner!");
+            StartCoroutine(WinningText.instance.ShowWinText());
+
         }
     }
 }
