@@ -66,6 +66,7 @@ public class ObjectGrabber : MonoBehaviour
         if(butt)
         {
             _myButt = butt;
+            _myButt.onHover(true);
         }
     }
 
@@ -78,6 +79,7 @@ public class ObjectGrabber : MonoBehaviour
 
         if (_myButt != null && other.GetComponent<Button3d>() == _myButt)
         {
+            _myButt.onHover(false);
             _myButt = null;
         }
     }
