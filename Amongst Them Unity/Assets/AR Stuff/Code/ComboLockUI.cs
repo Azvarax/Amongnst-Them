@@ -10,7 +10,7 @@ public class ComboLockUI : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(FindObjectOfType<NumberSelect>().OpenDoor);
+        //GetComponent<Button>().onClick.AddListener(FindObjectOfType<NumberSelect>().OpenDoor);
     }
 
     // Update is called once per frame

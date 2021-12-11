@@ -27,30 +27,12 @@ public class ObjectGrabber : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (_potentialObject != null)
-            {
-                _grabbedObject = _potentialObject;
-                _grabbedObject.Grab(this);
-            }
-
-            if (_myButt != null)
-            {
-                _myButt.OnMouseDown();
-            }
+            TryGrab();
         }
 
         else if (Input.GetKeyUp(KeyCode.E))
         {
-            if (_grabbedObject != null)
-            {
-                _grabbedObject.Fling();
-            }
-
-            if(_myButt != null)
-            {
-                _myButt.OnMouseUp();
-            }
-            Reset();
+            TryLetGo();
         }
     }
 
@@ -88,5 +70,33 @@ public class ObjectGrabber : MonoBehaviour
     {
         _potentialObject = null;
         _grabbedObject = null;
+    }
+
+    public void TryGrab()
+    {
+        if (_potentialObject != null)
+        {
+            _grabbedObject = _potentialObject;
+            _grabbedObject.Grab(this);
+        }
+
+        if (_myButt != null)
+        {
+            _myButt.OnMouseDown();
+        }
+    }
+
+    public void TryLetGo()
+    {
+        if (_grabbedObject != null)
+        {
+            _grabbedObject.Fling();
+        }
+
+        if (_myButt != null)
+        {
+            _myButt.OnMouseUp();
+        }
+        Reset();
     }
 }
