@@ -14,7 +14,7 @@ public class Button3d : MonoBehaviour
 
     private Material _myMaterial;
 
-    private void Awake()
+    private void Start()
     {
         _myMaterial = buttonRenderer.material;
         _myMaterial.SetColor("_Color", upTint);
