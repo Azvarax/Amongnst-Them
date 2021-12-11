@@ -3272,10 +3272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeablePrefabs:
-  - {fileID: 5511694098702142903, guid: 068c06f9344c973428e793ce4d8755e2, type: 3}
-  - {fileID: 6467172756326818563, guid: b0f2596c24e5406498c59a22016dd3ed, type: 3}
-  - {fileID: 1623590151547911920, guid: 4641eed7a0a207b4aa5877f5c3001317, type: 3}
-  - {fileID: 6821459991897696194, guid: 994ac5ec2df1de94792640b988ff9a50, type: 3}
+  - {fileID: 8695200123639823740, guid: 15f42faa16f9f9048b4695ccc331e1f4, type: 3}
+  - {fileID: 5305244096160887452, guid: 02556d0d4184315459d75ca7db0e02e5, type: 3}
+  - {fileID: 8572731322721850540, guid: 33733c1686a226e4bb3d745752d852ce, type: 3}
+  - {fileID: 2894449264742841204, guid: 645915d187377ec47a1cd4af8331265c, type: 3}
   confirmAudio: {fileID: 1674023553}
   checkmark: {fileID: 303835426}
 --- !u!114 &1674023551

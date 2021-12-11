@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8577433744709263331}
   - component: {fileID: 4101454221928968090}
   m_Layer: 0
-  m_Name: Game-Money1
+  m_Name: _Game-MoneyFPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

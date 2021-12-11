@@ -72,7 +72,11 @@ public class ImageRecognitionDemo : MonoBehaviour
 
         GameObject prefab = spawnedPrefabs[name];
         prefab.transform.position = position;
-        prefab.transform.eulerAngles = rotation;
+
+        if (name == "Game-SafeAR")
+        {
+            prefab.transform.eulerAngles = rotation;
+        }
         prefab.SetActive(true);
     }
 
