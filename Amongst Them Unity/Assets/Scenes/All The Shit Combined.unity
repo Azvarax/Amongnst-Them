@@ -226,13 +226,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38447043}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -42.5, y: 1.64, z: 26.5}
   m_LocalScale: {x: 9.179382, y: 3.2008, z: 7.72321}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &50003795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -552,13 +552,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333264967}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -17.7, y: 1.64, z: 23.5}
   m_LocalScale: {x: 9.179382, y: 3.2008, z: 7.72321}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &406701978
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,13 +819,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709982572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -30, y: 1.64, z: 35.4}
   m_LocalScale: {x: 9.179382, y: 3.2008, z: 7.72321}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &723545880
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +885,7 @@ GameObject:
   - component: {fileID: 734852196}
   - component: {fileID: 734852198}
   - component: {fileID: 734852197}
+  - component: {fileID: 734852199}
   m_Layer: 5
   m_Name: Winning Text
   m_TagString: Untagged
@@ -908,7 +909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.3, y: -8.9}
+  m_AnchoredPosition: {x: -45.32, y: 10.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734852197
@@ -918,7 +919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734852195}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -931,10 +932,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TASK COMPLETED
+  m_text: Task Completed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ceedc644998a314d9071c9d55169221, type: 2}
-  m_sharedMaterial: {fileID: -2500052345674711563, guid: 3ceedc644998a314d9071c9d55169221,
+  m_fontAsset: {fileID: 11400000, guid: bdf1b0dbcc2217d429c9aaaaebd16837, type: 2}
+  m_sharedMaterial: {fileID: -409556102515127618, guid: bdf1b0dbcc2217d429c9aaaaebd16837,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -959,13 +960,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1009,6 +1010,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734852195}
   m_CullTransparentMesh: 1
+--- !u!114 &734852199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734852195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4baa4d5eed1ed418b7624eb6d392b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winText: {fileID: 734852197}
 --- !u!1 &941907201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1767,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _games:
-  - {fileID: 4101454221928968090, guid: 632ae09c48618c64291bb7e635eb34bf, type: 3}
-  - {fileID: 4025429211690811128, guid: 06373936d146c1642bea7f8ad3f246f1, type: 3}
-  - {fileID: 4141113648076842913, guid: 7aa940e9426c3b341ac4c5e36512c1c9, type: 3}
-  - {fileID: 4141113648076842913, guid: 7aa940e9426c3b341ac4c5e36512c1c9, type: 3}
+  - {fileID: 2894449264742841205, guid: 6032e1d5304fa3543968f79fd5ab7e78, type: 3}

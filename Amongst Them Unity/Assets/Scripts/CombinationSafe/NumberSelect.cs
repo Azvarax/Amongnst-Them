@@ -9,9 +9,13 @@ public class NumberSelect : MonoBehaviour
     [SerializeField] SafeSelect safe;
     [SerializeField] float targetAngle;
 
+    public bool LeftButton;
+    public bool RightButton;
+
     Vector3 curAngle;
     float change;
     List<int> numberList = new List<int>();
+    bool _completed = false;
 
     bool direction;
     int comboPosition;
@@ -23,21 +27,26 @@ public class NumberSelect : MonoBehaviour
         curAngle = door.eulerAngles;
     }
 
-    
-    private void FixedUpdate()
+
+    private void Update()
     {
+        if (_completed)
+        {
+            return;
+        }
+
         if (direction)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (RightButton)
             {
-                dial.Rotate(0f, 0f, 1f);
+                dial.Rotate(0f, 0f, 120f * Time.deltaTime);
             }
         }
         else
         {
-            if (Input.GetKey(KeyCode.A))
+            if (LeftButton)
             {
-                dial.Rotate(0f, 0f, -1f);
+                dial.Rotate(0f, 0f, 120f * Time.deltaTime);
             }
         }
 
@@ -45,10 +54,14 @@ public class NumberSelect : MonoBehaviour
         {
             if (comboPosition == 2)
             {
-                StartCoroutine(SmoothSetAngle(new Vector3(0, 120, 0)));
+                _completed = true;
+                StartCoroutine(SmoothSetAngle(new Vector3(0f, -20f, 0f)));
             }
             else
-            { comboPosition++; }
+            {
+                comboPosition++;
+            }
+
             direction = !direction;
         }
     }
@@ -82,18 +95,40 @@ public class NumberSelect : MonoBehaviour
     {
         while(door.eulerAngles != angle)
         {
-            SetAngle(door.eulerAngles + new Vector3(0, 5, 0));
-            yield return new WaitForSeconds(0.5f);
+            door.rotation = Quaternion.Slerp(door.rotation, Quaternion.Euler(angle), 5f * Time.deltaTime);
+            //SetAngle(door.eulerAngles + new Vector3(0, 5, 0));
+            //yield return new WaitForSeconds(0.5f);
+            yield return null;
         }
+
+        door.rotation = Quaternion.Euler(angle);
+        StartCoroutine(WinningText.instance.ShowWinText());
+
     }
 
     void SetAngle(Vector3 angle)
     {
-        door.localEulerAngles = angle;
+        door.eulerAngles = angle;
+        
     }
 
-    public void OpenDoor()
+    public void leftDown()
     {
-        SetAngle(new Vector3(0, -120, 0));
+        LeftButton = true;
+    }
+
+    public void leftUp()
+    {
+        LeftButton = false;
+    }
+
+    public void rightDown()
+    {
+        RightButton = true;
+    }
+
+    public void rightUp()
+    {
+        RightButton = false;
     }
 }

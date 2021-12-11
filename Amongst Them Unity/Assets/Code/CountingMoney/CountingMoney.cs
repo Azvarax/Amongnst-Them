@@ -49,6 +49,8 @@ public class CountingMoney : MonoBehaviour
             GameObject pile = Instantiate(PileofMoney,pileLocator);
             pile.transform.localPosition = Vector3.zero;
             pile.transform.localRotation = Quaternion.identity;
+
+            StartCoroutine(WinningText.instance.ShowWinText());
         }
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class ObjectGrabber : MonoBehaviour
 {
     private Collider _collider;
-    [HideInInspector] public GrabbableObject potentialObject;
+    private GrabbableObject _potentialObject;
     private GrabbableObject _grabbedObject;
-
+    private Button3d _myButt;
 
     void Awake()
     {
@@ -27,12 +27,30 @@ public class ObjectGrabber : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TryGrab();
+            if (_potentialObject != null)
+            {
+                _grabbedObject = _potentialObject;
+                _grabbedObject.Grab(this);
+            }
+
+            if (_myButt != null)
+            {
+                _myButt.OnMouseDown();
+            }
         }
 
         else if (Input.GetKeyUp(KeyCode.E))
         {
-            TryLetGo();
+            if (_grabbedObject != null)
+            {
+                _grabbedObject.Fling();
+            }
+
+            if(_myButt != null)
+            {
+                _myButt.OnMouseUp();
+            }
+            Reset();
         }
     }
 
@@ -41,39 +59,34 @@ public class ObjectGrabber : MonoBehaviour
         GrabbableObject grabbable = other.GetComponent<GrabbableObject>();
         if(grabbable != null)
         {
-            potentialObject = grabbable;
+            _potentialObject = grabbable;
+        }
+
+        Button3d butt = other.GetComponent<Button3d>();
+        if(butt)
+        {
+            _myButt = butt;
+            _myButt.onHover(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (potentialObject != null && other.GetComponent<GrabbableObject>() == potentialObject)
+        if (_potentialObject != null && other.GetComponent<GrabbableObject>() == _potentialObject)
         {
-            potentialObject = null;
+            _potentialObject = null;
+        }
+
+        if (_myButt != null && other.GetComponent<Button3d>() == _myButt)
+        {
+            _myButt.onHover(false);
+            _myButt = null;
         }
     }
 
     public void Reset()
     {
-        potentialObject = null;
+        _potentialObject = null;
         _grabbedObject = null;
-    }
-
-    public void TryGrab()
-    {
-        if (potentialObject != null)
-        {
-            _grabbedObject = potentialObject;
-            _grabbedObject.Grab(this);
-        }
-    }
-
-    public void TryLetGo()
-    {
-        if (_grabbedObject != null)
-        {
-            _grabbedObject.Fling();
-        }
-        Reset();
     }
 }
