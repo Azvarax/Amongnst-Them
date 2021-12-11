@@ -10,6 +10,12 @@ public class ImageRecognitionDemo : MonoBehaviour
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     private ARTrackedImageManager _aRTrackedImageManager;
 
+    [SerializeField] AudioSource confirmAudio;
+    [SerializeField] GameObject checkmark;
+    bool canShowCheckmark;
+
+    ARTrackedImage currentTrackedImage;
+    
     void Awake()
     {
         _aRTrackedImageManager = FindObjectOfType<ARTrackedImageManager>();
@@ -21,6 +27,9 @@ public class ImageRecognitionDemo : MonoBehaviour
             newPrefab.name = prefab.name;
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }
+
+        checkmark.SetActive(false);
+        canShowCheckmark = true;
     }
 
     private void OnEnable()
@@ -38,6 +47,12 @@ public class ImageRecognitionDemo : MonoBehaviour
         foreach (ARTrackedImage trackedImage in args.added)
         {
             UpdateImage(trackedImage);
+
+            if (canShowCheckmark && (trackedImage != currentTrackedImage || currentTrackedImage == null))
+            {
+                currentTrackedImage = trackedImage;
+                StartCoroutine(ShowScanConfirmed());
+            }
         }
         foreach (ARTrackedImage trackedImage in args.updated)
         {
@@ -59,13 +74,15 @@ public class ImageRecognitionDemo : MonoBehaviour
         prefab.transform.position = position;
         prefab.transform.eulerAngles = rotation;
         prefab.SetActive(true);
+    }
 
-        //foreach (GameObject go in spawnedPrefabs.Values)
-        //{
-        //    if (go.name != name)
-        //    {
-        //        go.SetActive(false);
-        //    }
-        //}
+    private IEnumerator ShowScanConfirmed()
+    {
+        confirmAudio.Play();
+        checkmark.SetActive(true);
+        canShowCheckmark = false;
+        yield return new WaitForSeconds(3);
+        checkmark.SetActive(false);
+        canShowCheckmark = true;
     }
 }

@@ -306,10 +306,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5507595000998186311, guid: d0579319a32de4f41adf148d30da6b17,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.000061
+      objectReference: {fileID: 0}
     - target: {fileID: 7169361786862734209, guid: d0579319a32de4f41adf148d30da6b17,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169361786862734211, guid: d0579319a32de4f41adf148d30da6b17,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169361786862734211, guid: d0579319a32de4f41adf148d30da6b17,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1230
       objectReference: {fileID: 0}
     - target: {fileID: 7169361786862734213, guid: d0579319a32de4f41adf148d30da6b17,
         type: 3}
