@@ -10,6 +10,8 @@ public class ImageRecognitionDemo : MonoBehaviour
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     private ARTrackedImageManager _aRTrackedImageManager;
 
+    [SerializeField] SafeButton safeButton1;
+    [SerializeField] SafeButton safeButton2;
     [SerializeField] AudioSource confirmAudio;
     [SerializeField] GameObject checkmark;
     bool canShowCheckmark;
@@ -76,6 +78,10 @@ public class ImageRecognitionDemo : MonoBehaviour
         if (name == "Game-SafeAR")
         {
             prefab.transform.eulerAngles = rotation;
+            safeButton1.gameObject.SetActive(true);
+            safeButton2.gameObject.SetActive(true);
+            safeButton1.Init();
+            safeButton2.Init();
         }
         prefab.SetActive(true);
     }

@@ -486,6 +486,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Safe
       objectReference: {fileID: 0}
+    - target: {fileID: 7706677406630408672, guid: 6033892b72a983248a70e30290189fcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696226849516397531, guid: 6033892b72a983248a70e30290189fcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6874064626233356085, guid: 6033892b72a983248a70e30290189fcf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6033892b72a983248a70e30290189fcf, type: 3}
